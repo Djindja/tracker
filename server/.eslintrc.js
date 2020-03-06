@@ -3,6 +3,9 @@ module.exports = {
     browser: true,
     es6: true,
   },
+  rules: {
+    'no-console': 'off',
+  },
   extends: [
     'plugin:react/recommended',
     'airbnb',
