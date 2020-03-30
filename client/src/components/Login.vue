@@ -6,7 +6,7 @@
         <br>
         <v-text-field label="Password" type="password" v-model="password"></v-text-field>
         <br>
-        <div class="error" v-html="error" />
+        <div class="danger-alert" v-html="error" />
         <v-btn class="cyan" @click="login">Login</v-btn>
       </panel>
     </v-flex>
@@ -15,7 +15,6 @@
 
 <script>
 import AuthenticationService from '@/services/AuthenticationService'
-import Panel from '@/components/Panel'
 
 export default {
   data () {
@@ -38,15 +37,9 @@ export default {
         this.error = error.response.data.error
       }
     }
-  },
-  components: {
-    Panel
   }
 }
 </script>
 
 <style scoped>
-.error {
-  color: red;
-}
 </style>

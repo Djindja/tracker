@@ -10,16 +10,10 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-// app.get('/status', (req, res) => {
-//   res.send({
-//     message: `Hello Stefan!`,
-//   });
-// });
-
 require('./routes')(app)
 
 sequelize.sync()
-  .then(() => {
-    app.listen(config.port);
-    console.log(`Server started on port ${config.port}`);
-  })
+.then(() => {
+  app.listen(config.port);
+  console.log(`Server started on port ${config.port}`);
+})
