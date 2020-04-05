@@ -1,2 +1,2 @@
-# tracker
-vue / express
+# tracker app
+vue / express / node
